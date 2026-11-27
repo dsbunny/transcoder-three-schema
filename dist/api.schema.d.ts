@@ -1,4 +1,9 @@
 import * as z from "zod";
+export declare const TranscoderThreePingResponseSchema: z.ZodObject<{
+    ping: z.ZodLiteral<"pong">;
+    timestamp: z.ZodISODateTime;
+}, z.core.$strip>;
+export type TranscoderThreePingResponse = z.infer<typeof TranscoderThreePingResponseSchema>;
 export declare const GetJobStatusRequestSchema: z.ZodOptional<z.ZodObject<{
     '@type': z.ZodLiteral<"GetJobStatusRequest">;
 }, z.core.$strip>>;
